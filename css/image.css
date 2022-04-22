@@ -1,0 +1,259 @@
+@font-face {
+	font-family: "Open Sans";
+	src: url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap") format('woff2');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src: url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap") format('woff2');
+	font-weight: 400;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	outline: 1px solid red;
+}
+
+a {
+	text-decoration: none;
+}
+
+select,
+textarea,
+input {
+	font-family: inherit;
+}
+
+ul ~ li{
+	list-style-type: none;
+	font-family: inherit;
+}
+
+
+body {
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+
+}
+
+/*------Шапка-------*/
+.container {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	margin: 20px auto;
+	align-items: center;
+	width: 90%;
+	
+}
+
+.nav-item {
+	margin-right: 20px;
+	text-decoration: none;
+}
+
+.nav-item:last-child{
+	margin-right: 0;
+}
+
+.navbar-brand {
+	width: 207px;
+	min-height: 53px;
+	margin-left: 0;
+
+	background-image: url("../image/logo.png");
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	cursor: pointer;
+
+}
+
+.navbar-nav {
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+
+	list-style-type: none;
+}
+
+.nav-item:hover {
+	text-decoration: underline;
+	color: #bbd162;
+}
+
+.form-control:focus {
+	outline: 2px solid #bbd162;
+	border-color: #bbd162;
+}
+
+.btn-outline-success {
+	cursor: pointer;
+}
+
+.button_lks {
+	background-image: url("../svg/sign-out.svg");
+	width: 30px;
+	border: none;
+	background-color: #ffffff;
+	cursor: pointer;
+
+	display: block;
+	width: 30px;
+	height: 30px;
+	
+	
+	border: none;
+	
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	
+}
+
+.button_lks:hover::after{
+	content: attr("data-title"); 
+    position: absolute; 
+    
+    z-index: 1; 
+    background: rgba(255,255,230,0.9);
+    
+    font-size: 11px; 
+    padding: 5px 10px; 
+    border: 1px solid #333;
+}
+.search{
+	border:#bbd162 2px solid;
+	margin-bottom: 0px;
+}
+.search-form{
+	min-width: 170px ;
+	min-height: 32px;
+	padding-left: 10px;
+	
+	border: none;
+}
+
+.search-button{
+	border: none;
+	color: #ffffff;
+	background-color: #bbd162;
+	min-width: 35px;
+	min-height: 35px;
+	background-image: url("../svg/search.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 20px 20px;
+	padding: 13.5px;
+	margin-left: -4px;
+	box-shadow: none;
+	-webkit-appearance: none;
+	 -moz-appearance: none;
+	 cursor: pointer;
+}
+.search:hover{
+	border:#556B2F 2px solid;
+}
+.search-button:hover{
+	background-color: #556B2F;
+}
+
+.main{
+	margin: 0 auto;
+}
+
+/*------Слайдер-------*/
+
+.slider{
+	width: 90%;
+	min-height: 750px;
+	overflow: hidden;
+	border: 10px solid #bbd162;
+}
+
+.middle{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.navigation{
+	position: absolute;
+	bottom: 16px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+}
+
+.bar{
+	width: 30px;
+	height: 8px;
+	margin: 6px;
+	cursor: pointer;
+	background-color: #bbd162;
+	border: #556B2F;
+	border-radius:  10px;
+	opacity: 0.7;
+	transition:  all .4s ease;
+}
+
+.bar:hover{
+     opacity: 1;
+	 transform:  scale(1.4);
+
+}
+
+input[name="r"]{
+	position: absolute;
+	visibility: hidden;
+}
+
+.sliders{
+	width: 400%;
+	height: 100%;
+	display: flex;
+}
+
+.slide{
+	width: 25%;
+	
+	transition:  all .6s ease;
+}
+
+.slide-image{
+	height: 650px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.img-1{
+	background-image: url("../image/1.jpg");
+}
+.img-2{
+	background-image: url("../image/2.jpg");
+}
+.img-3{
+	background-image: url("../image/3.jpg");
+}
+.img-4{
+	background-image: url("../image/4.jpg");
+}
+
+#r1:checked ~ .s1{
+	margin-left: 0;
+}
+#r2:checked ~ .s1{
+	margin-left: -25%;
+}
+#r3:checked ~ .s1{
+	margin-left: -50%;
+}
+#r4:checked ~ .s1{
+	margin-left: -75%;
+}
