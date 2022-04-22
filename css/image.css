@@ -220,13 +220,12 @@ input[name="r"]{
 }
 
 .slide{
-	width: 25%;
-	
+	/* width: 25%; */
 	transition:  all .6s ease;
 }
 
 .slide-image{
-	height: 650px;
+	min-height: 650px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
